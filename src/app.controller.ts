@@ -30,6 +30,10 @@ export class AppController {
     return this.appService.getHello();
   }
   @Get()
+  getHello1(): string {
+    return this.appService.getHello();
+  }
+  @Get()
   getAnimes(): Anime[] {
     return this.appService.getAnimes();
   }
