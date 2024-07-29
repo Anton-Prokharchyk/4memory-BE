@@ -21,20 +21,21 @@ type Anime = {
   sameAs: { id: string; name: string; img: string }[];
 };
 
-@Controller()
+@Controller('app')
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
   getHello(): string {
+    console.log('Get hello')
     return this.appService.getHello();
   }
-  @Get()
-  getHello1(): string {
-    return this.appService.getHello();
-  }
-  @Get()
+  @Get('/anime')
   getAnimes(): Anime[] {
-    return this.appService.getAnimes();
+    console.log('animes')
+
+    const animes = this.appService.getAnimes();
+    console.log(animes)
+    return animes;
   }
 }
