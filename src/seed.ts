@@ -21,7 +21,7 @@ type Anime = {
 };
 
 const animes: Anime[] = [];
-for (let i = 0; i < 100; i += 1) {
+for (let i = 0; i < 5; i += 1) {
   animes.push({
     id: i.toString(),
     name: `${i}Title`,
