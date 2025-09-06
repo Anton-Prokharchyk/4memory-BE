@@ -1,0 +1,11 @@
+version: '2.38.2'
+services:
+  frotnend:
+    container_name: backend-4mm
+    build: .
+    restart: always
+    ports:
+      - 4000:3000
+    volumes:
+      - ./:/backend
+      - /backend/node_modules
