@@ -1,7 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
 
-
 type Anime = {
   id: string;
   name: string;
@@ -27,15 +26,15 @@ export class AppController {
 
   @Get()
   getHello(): string {
-    console.log('Get hello')
+    console.log('Get hello');
     return this.appService.getHello();
   }
   @Get('/anime')
   getAnimes(): Anime[] {
-    console.log('animes')
+    console.log('animes');
 
     const animes = this.appService.getAnimes();
-    console.log(animes)
+    console.log(animes);
     return animes;
   }
 }

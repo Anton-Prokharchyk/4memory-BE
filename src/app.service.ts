@@ -1,7 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import data from './seed';
 
-
 type Anime = {
   id: string;
   name: string;
