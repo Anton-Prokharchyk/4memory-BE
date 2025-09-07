@@ -1,11 +1,12 @@
 version: '2.38.2'
 services:
-  frotnend:
-    container_name: backend-4mm
+  ath-backend:
+    container_name: ath-backend
     build: .
+    image: anityanhub-backend:latest
     restart: always
     ports:
-      - 4000:3000
+      - 3001:3000
     volumes:
-      - ./:/backend
-      - /backend/node_modules
+      - ./:/ath-backend
+      - /ath-backend/node_modules
